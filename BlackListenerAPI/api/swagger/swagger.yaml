@@ -1,0 +1,56 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: BlackListenerAPI
+# during dev, should point to your local machine
+host: 0.0.0.0:10010
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - string
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /user:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: user
+    get:
+      description: Get specified user data by json.
+      # used as the method name of the controller
+      operationId: get
+      parameters:
+        - name: id
+          in: query
+          description: A User ID
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Success
+        "404":
+          description: Not found that user ID
+        "400":
+          description: Not specified query(Required id query)
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+#definitions:
+#  HelloWorldResponse:
+#    required:
+#      - id
+#    properties:
+#      message:
+#        type: string
+#  ErrorResponse:
+#    required:
+#      - message
+#    properties:
+#      message:
+#        type: string
