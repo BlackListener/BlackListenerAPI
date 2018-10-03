@@ -29,7 +29,12 @@ paths:
         - name: id
           in: query
           description: A User ID
-          required: true
+          required: false
+          type: string
+        - name: tag
+          in: query
+          description: User Tag
+          required: false
           type: string
       responses:
         "200":
@@ -38,6 +43,8 @@ paths:
           description: Not found that user ID
         "400":
           description: Not specified query(Required id query)
+        "500":
+          description: Server or configration or client error
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions

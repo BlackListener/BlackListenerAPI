@@ -10,7 +10,8 @@
   "dependencies": {
     "express": "^4.12.3",
     "node-fetch": "^2.2.0",
-    "swagger-express-mw": "^0.7.0"
+    "swagger-express-mw": "^0.7.0",
+    "yaml": "^1.0.0"
   },
   "devDependencies": {
     "should": "^7.1.0",

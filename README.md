@@ -4,8 +4,8 @@
 
 - You need a few commands before using this API.
 - You need ``npm i -g swagger`` for download a swagger cli.
-- Change the directory to ``BlackListenerAPI`` and Run ``npm i`` for download dependencies.
-- To using this API, type ``swagger project start BlackListenerAPI``.
+- Change the directory to ``src`` and Run ``npm i`` for download dependencies(And go to back directory to ``../``).
+- To using this API, type ``swagger project start src``.
 - Your API Server will start in 0.0.0.0:10010
 
 ## Test your API
